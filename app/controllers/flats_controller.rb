@@ -12,7 +12,7 @@ class FlatsController < ApplicationController
     if @flat.save
       redirect_to flats_path
     else
-      render :new, status: :unaccessible_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
