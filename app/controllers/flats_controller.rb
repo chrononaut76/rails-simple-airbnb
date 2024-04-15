@@ -3,6 +3,10 @@ class FlatsController < ApplicationController
     @flats = Flat.all
   end
 
+def show
+
+end
+
   def new
     @flat = Flat.new
   end
@@ -10,7 +14,7 @@ class FlatsController < ApplicationController
   def create
     @flat = Flat.new(flat_params)
     if @flat.save
-      redirect_to flats_path
+      redirect_to flat_path(@flat)
     else
       render :new, status: :unprocessable_entity
     end

@@ -1,0 +1,23 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    <h5 class="card-title"><%= flat.name %></h5>
+    <p class="card-text"><%= flat.address %></p>
+    <div class="row">
+      <div class="col">
+        <div class="card-text">
+          <%= tag.span class: %w[fa-solid fa-user-group] %>
+          <%= flat.number_of_guests %>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card-text">
+          <%= tag.span class: %w[fa-solid fa-euro-sign] %>
+          <%= flat.price_per_night %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <%= link_to "More info", flat_path(flat), class: 'card-link' %>
+  </div>
+</div>
